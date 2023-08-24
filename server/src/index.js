@@ -3,6 +3,7 @@ const { startStandaloneServer } = require("@apollo/server/standalone");
 const typeDefs = require("./schema");
 const { addMocksToSchema } = require("@graphql-tools/mock");
 const { makeExecutableSchema } = require("@graphql-tools/schema");
+
 const mocks = {
   Query: () => ({
     tracksForHome: () => [...new Array(6)],
